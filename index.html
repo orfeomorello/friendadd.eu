@@ -158,15 +158,17 @@
                                             Facebook's Graph Search lets you search for unknown people and friends by using specific details of their Likes, lives and loves.
                                             We have write a collection of search queries that will help you to find new friends.
                                         </p>
+
+											<fb:login-button scope="public_profile" onlogin="checkLoginState();">
+											</fb:login-button>
+
                                     </div>
 
 									<div class="col-sm-7 .service-table-cell" id="notloggedin" style="display:none">
-										<div class="row">
-												<div class="col-sm-12 text-center">
-														<fb:login-button scope="public_profile" onlogin="checkLoginState();">
-														</fb:login-button>
-												</div>
-										</div>
+													<div class="row">
+																<div class="col-sm-12 text-center">
+																</div>
+										    		</div>
 									</div>
 
                                     <div class="col-sm-7 .service-table-cell" id="loggedin" style="display:none">
