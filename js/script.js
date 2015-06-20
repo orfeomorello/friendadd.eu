@@ -1,5 +1,5 @@
 $(document).ready(function($) {
-
+alert(jQuery.browser.mobile)
 if(jQuery.browser.mobile)
 {
    //You are using a mobile device!
