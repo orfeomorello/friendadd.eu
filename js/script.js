@@ -1,5 +1,7 @@
 $(document).ready(function($) {
 
+alert(typeof window.orientation !== 'undefined');
+
 if(typeof window.orientation !== 'undefined')
 {
    //You are using a mobile device!
