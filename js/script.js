@@ -1,5 +1,13 @@
 $(document).ready(function($) {
 
+if(jQuery.browser.mobile)
+{
+   //You are using a mobile device!
+   var fburl = $('.fblink').attr('href')
+   fburl = url.replace('https://www.facebook.com/search', 'https://m.facebook.com/graphsearch')
+   $('.fblink').attr('href', fburl)
+}
+
 $("#findwoman").click(function(event) {
   event.preventDefault();
   event.stopPropagation();
