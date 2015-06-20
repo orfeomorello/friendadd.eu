@@ -1,13 +1,13 @@
 $(document).ready(function($) {
 
-alert(typeof window.orientation !== 'undefined');
-
 if(typeof window.orientation !== 'undefined')
 {
-   //You are using a mobile device!
-   var fburl = $('.fblink').attr('href')
-   fburl = url.replace('https://www.facebook.com/search', 'https://m.facebook.com/graphsearch')
-   $('.fblink').attr('href', fburl)
+	//You are using a mobile device!
+	$('.fblink').each(function(){
+	 var fburl = $(this).attr('href')
+	 fburl = fburl.replace('https://www.facebook.com/search', 'https://m.facebook.com/graphsearch')
+     $(this).attr('href', fburl)
+    });
 }
 
 $("#findwoman").click(function(event) {
