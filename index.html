@@ -36,11 +36,6 @@
                 <div class="header-content wow bounce animated">
                     <h1 class="heading">Add a Friend</h1>
                     <h6>( B e t a )</h6>
-                    <!--
-                    <p class="heading-subtitle">
-
-                    </p>
-                    -->
                 </div> <!-- /.header-content -->
 
                 <div class="wow zoomIn button-down" data-wow-duration="1s" data-wow-offset="100">
@@ -88,10 +83,10 @@
                                             Facebook's Graph Search lets you search for unknown people and friends by using specific details of their Likes, lives and loves.
                                             We have write a collection of search queries that will help you to find new friends.
                                         </p>
-
+										<p style="text-align:center" id="loginbutton">
 											<fb:login-button scope="public_profile" onlogin="checkLoginState();">
 											</fb:login-button>
-
+										</p>
                                     </div>
 
 									<div class="col-sm-7 .service-table-cell" id="notloggedin" style="display:none">
@@ -415,16 +410,19 @@
 	      // for FB.getLoginStatus().
 	      if (response.status === 'connected') {
 	        // Logged into your app and Facebook.
+	        $('#loginbutton').hide();
 	        $('#notloggedin').hide();
 	        $('#loggedin').show();
 	      } else if (response.status === 'not_authorized') {
 	         $('#loggedin').hide();
 	         $('#notloggedin').show();
+	         $('#loginbutton').show();
 	      } else {
 	        // The person is not logged into Facebook, so we're not sure if
 	        // they are logged into this app or not.
 	        $('#loggedin').hide();
 	        $('#notloggedin').show();
+	        $('#loginbutton').show();
 	      }
 	    }
 
